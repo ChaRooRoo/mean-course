@@ -1,7 +1,9 @@
 <app-header></app-header>
 <main>
 
-  <app-post-create></app-post-create>
-  <app-post-list></app-post-list>
+  <!--$event : gives you access to the data you emitted for all types of events which gives you a default html DOM object -->
+
+  <app-post-create (postCreated)="onPostAdded($event)"></app-post-create>
+  <app-post-list [posts]="storedPosts"></app-post-list>
 
 </main>

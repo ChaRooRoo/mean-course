@@ -5,9 +5,11 @@ import { Component, EventEmitter, Output } from '@angular/core';
   templateUrl: './post-create.component.html',
   styleUrls: ['./post-create.component.css']
 })
+
 export class PostCreateComponent {
   enteredTitle = '';
   enteredContent = '';
+  //allows you to listen form the outside a.k.a the app component(parent container)
   @Output() postCreated = new EventEmitter();
 
   onAddPost() {
